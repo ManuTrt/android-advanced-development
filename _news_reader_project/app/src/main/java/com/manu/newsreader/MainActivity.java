@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.manu.newsreader.ui.main.MainFragment;
+import com.manu.newsreader.ui.main.NewsListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, new NewsListFragment())
                     .commitNow();
         }
     }

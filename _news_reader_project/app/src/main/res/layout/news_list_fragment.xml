@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.manu.newsreader.ui.main.NewsListViewModel" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.NewsListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragNewsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:items="@{viewModel.newsList}"/>
+
+</RelativeLayout>
+</layout>
