@@ -3,7 +3,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.manu.newsreader.ui.main.ArticleItemViewModel" />
+            type="com.manu.newsreader.ui.main.model.ArticleItemViewModel" />
     </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="@string/articleItem_mockPhotoDescription"
-        android:src="@{viewModel.imagePath}"
+        app:imageUrl="@{viewModel.imagePath}"
         android:layout_margin="10dp" />
 
     <TextView

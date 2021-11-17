@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main;
+package com.manu.newsreader.ui.main.model;
 
 import androidx.lifecycle.ViewModel;
 

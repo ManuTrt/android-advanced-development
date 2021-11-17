@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main;
+package com.manu.newsreader.ui.main.fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.manu.newsreader.databinding.NewsListFragmentBinding;
+import com.manu.newsreader.ui.main.model.NewsListViewModel;
+import com.manu.newsreader.ui.main.model.factory.ViewModelFactory;
 
 public class NewsListFragment extends Fragment {
 
@@ -22,7 +24,7 @@ public class NewsListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        viewModel = new ViewModelProvider(this).get(NewsListViewModel.class);
+        viewModel = new ViewModelProvider(this, new ViewModelFactory(requireActivity().getApplication())).get(NewsListViewModel.class);
 
         // Register the viewModel to the fragment's lifecycle
         getLifecycle().addObserver(viewModel);
