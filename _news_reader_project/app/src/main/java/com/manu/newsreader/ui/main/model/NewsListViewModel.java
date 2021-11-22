@@ -5,18 +5,13 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
-import androidx.databinding.ObservableBoolean;
-import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableList;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
-import androidx.lifecycle.ViewModel;
 
 import com.manu.data.NewsRepository;
-import com.manu.data.features.news.model.Article;
-import com.manu.newsreader.R;
 import com.manu.newsreader.ui.main.model.mapper.ArticleMapper;
 import com.manu.newsreader.ui.main.reactive.SingleLiveEvent;
 
@@ -28,12 +23,16 @@ public class NewsListViewModel extends AndroidViewModel implements LifecycleObse
     private final static String LINK = "https://newsapi.org/";
     private final NewsRepository repo;
 
-    public final ObservableList<ArticleItemViewModel> newsList = new ObservableArrayList<>();;
+    public final ObservableList<ArticleItemViewModel> newsList = new ObservableArrayList<>();
+    public final SingleLiveEvent<Throwable> error;
+    public final SingleLiveEvent<String> openLink;
 
     public NewsListViewModel(@NonNull Application application, NewsRepository repo) {
         super(application);
 
         this.repo = repo;
+        this.error = new SingleLiveEvent<>();
+        this.openLink = new SingleLiveEvent<>();
     }
 
     @SuppressLint("CheckResult")
@@ -49,13 +48,14 @@ public class NewsListViewModel extends AndroidViewModel implements LifecycleObse
     }
 
     private void onNewsArticlesReceived(@NonNull List<ArticleItemViewModel> articleVMs) {
-
         this.newsList.addAll(articleVMs);
     }
 
     private void onNewsArticlesError(Throwable throwable) {
+        error.setValue(throwable);
     }
 
     public void onPoweredBySelected() {
+        openLink.setValue(LINK);
     }
 }
