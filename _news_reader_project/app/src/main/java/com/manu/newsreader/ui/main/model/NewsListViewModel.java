@@ -2,6 +2,7 @@ package com.manu.newsreader.ui.main.model;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
@@ -38,6 +39,7 @@ public class NewsListViewModel extends AndroidViewModel implements LifecycleObse
     @SuppressLint("CheckResult")
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void refresh() {
+        Log.d("REFRESH_ARTICLES", "just refreshed the articles");
         repo.getNewsArticles()
                 .map(new ArticleMapper())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -48,10 +50,12 @@ public class NewsListViewModel extends AndroidViewModel implements LifecycleObse
     }
 
     private void onNewsArticlesReceived(@NonNull List<ArticleItemViewModel> articleVMs) {
+        Log.d("RECEIVED_ARTICLES", "just received the articles");
         this.newsList.addAll(articleVMs);
     }
 
     private void onNewsArticlesError(Throwable throwable) {
+        Log.d("ERROR_ARTICLES", "just received an error");
         error.setValue(throwable);
     }
 

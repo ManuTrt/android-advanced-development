@@ -19,4 +19,10 @@ public class ArticleEntity {
 
     public String description;
 
+    public ArticleEntity(String imageUrl, String title, String content, String description) {
+        this.imageUrl = imageUrl;
+        this.title = title;
+        this.content = content;
+        this.description = description;
+    }
 }

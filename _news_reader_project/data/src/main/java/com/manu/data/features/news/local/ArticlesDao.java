@@ -9,12 +9,16 @@ import java.util.List;
 
 import io.reactivex.Completable;
 import io.reactivex.Flowable;
+import io.reactivex.Single;
 
 @Dao
 public interface ArticlesDao {
     @Query("SELECT * FROM articles")
-    Flowable<List<ArticleEntity>> queryArticles();
+    Single<List<ArticleEntity>> queryArticles();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     Completable insertArticle(ArticleEntity todo);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    Completable insertArticles(List<ArticleEntity> articles);
 }
