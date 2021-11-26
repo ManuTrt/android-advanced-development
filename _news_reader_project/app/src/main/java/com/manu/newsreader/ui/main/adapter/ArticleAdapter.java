@@ -1,5 +1,7 @@
 package com.manu.newsreader.ui.main.adapter;
 
+import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -20,8 +22,15 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         this.articleModelList = new ArrayList<>();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void setArticleModelList(List<ArticleItemViewModel> articleModelList) {
         this.articleModelList = articleModelList;
+
+        // At first it receives an empty list and afterwards
+        // when the db query is done, it ignores the data received
+        // until first screen rotation. To prevent that I ll notify the RV when
+        // data set has changed
+        this.notifyDataSetChanged();
     }
 
     @NonNull

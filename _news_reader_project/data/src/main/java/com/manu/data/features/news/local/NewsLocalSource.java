@@ -21,7 +21,6 @@ public class NewsLocalSource {
     }
 
     public Single<List<Article>> getArticles() {
-        Log.d("GET_ARTICLES_LOCAL", "just got the articles");
         return dao.queryArticles().map(new ArticleEntityToModelMapper()::map);
     }
 
@@ -30,7 +29,6 @@ public class NewsLocalSource {
     }
 
     public void saveArticles(List<Article> articles) {
-        Log.d("SAVE_ARTICLES_LOCAL", "just saved the articles");
         dao.insertArticles(new ArticleModelToEntityMapper().map(articles))
                 .subscribeOn(Schedulers.io())
                 .subscribe();
