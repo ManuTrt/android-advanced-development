@@ -3,23 +3,13 @@ package com.manu.newsreader.ui.main.model;
 import androidx.lifecycle.ViewModel;
 
 public class ArticleItemViewModel extends ViewModel {
-    public String imagePath;
-    public String title;
-    public String content;
+    public final String imagePath;
+    public final String title;
+    public final String content;
 
-    public ArticleItemViewModel() {
-
-    }
-
-    public void setImagePath(String imagePath) {
+    public ArticleItemViewModel(String imagePath, String title, String content) {
         this.imagePath = imagePath;
-    }
-
-    public void setTitle(String title) {
         this.title = title;
-    }
-
-    public void setContent(String content) {
         this.content = content;
     }
 }
