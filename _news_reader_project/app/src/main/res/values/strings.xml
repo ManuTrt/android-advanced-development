@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">News Reader</string>
+    <string name="articleItem_mockPhotoDescription">news image</string>
+    <string name="articleItem_mockContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="articleItem_mockTitle">Lorem ipsum</string>
+
+    <string name="api_attribution">Powered by NewsAPI.org</string>
+    <string name="refresh">Refresh</string>
+    <string name="error_title">Oops</string>
+    <string name="network_error">Something went wrong, are you connected? debug: %s</string>
+    <string name="results">Received %d results</string>
+    <string name="ok">Ok</string>
 </resources>

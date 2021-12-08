@@ -1,12 +1,13 @@
-package com.manu.newsreader;
+package com.manu.newsreader.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.manu.newsreader.ui.main.MainFragment;
+import com.manu.newsreader.R;
+import com.manu.newsreader.ui.main.fragment.NewsListFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class NewsReaderMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, new NewsListFragment())
                     .commitNow();
         }
     }
