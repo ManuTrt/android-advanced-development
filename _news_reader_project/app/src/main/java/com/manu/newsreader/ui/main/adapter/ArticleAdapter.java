@@ -25,10 +25,9 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
     public void setArticleModelList(List<ArticleItemViewModel> articleModelList) {
         this.articleModelList = articleModelList;
 
-        // At first it receives an empty list and afterwards
-        // when the db query is done, it ignores the data received
-        // until first screen rotation. To prevent that I ll notify the RV when
-        // data set has changed
+        // The RecyclerView should refresh its appearance
+        // everytime the article list gets updated so that
+        // the newer articles will always be shown first
         this.notifyDataSetChanged();
     }
 

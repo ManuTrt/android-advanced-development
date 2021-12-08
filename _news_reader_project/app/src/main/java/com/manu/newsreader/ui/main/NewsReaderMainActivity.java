@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.manu.newsreader.R;
 import com.manu.newsreader.ui.main.fragment.NewsListFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class NewsReaderMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

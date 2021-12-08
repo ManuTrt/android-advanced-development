@@ -13,7 +13,7 @@ public class ArticleMapper implements Function<List<Article>, List<ArticleItemVi
         List<ArticleItemViewModel> articleVms = new ArrayList<>();
 
         for (Article article : articles) {
-            ArticleItemViewModel articleVM = new ArticleItemViewModel(article.title, article.content, article.imageUrl);
+            ArticleItemViewModel articleVM = new ArticleItemViewModel(article.imageUrl, article.title, article.content);
 
             articleVms.add(articleVM);
         }
