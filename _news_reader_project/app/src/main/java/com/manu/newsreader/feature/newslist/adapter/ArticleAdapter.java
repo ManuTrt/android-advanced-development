@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main.adapter;
+package com.manu.newsreader.feature.newslist.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.manu.newsreader.databinding.ArticleItemBinding;
-import com.manu.newsreader.ui.main.model.ArticleItemViewModel;
+import com.manu.newsreader.feature.newslist.model.ArticleItemViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

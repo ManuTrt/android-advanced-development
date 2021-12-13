@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main.navigator;
+package com.manu.newsreader.feature.newslist.navigator;
 
 import android.app.AlertDialog;
 import android.content.Context;

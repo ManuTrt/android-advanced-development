@@ -1,7 +1,7 @@
-package com.manu.newsreader.ui.main.model.mapper;
+package com.manu.newsreader.feature.newslist.model.mapper;
 
 import com.manu.data.features.news.model.Article;
-import com.manu.newsreader.ui.main.model.ArticleItemViewModel;
+import com.manu.newsreader.feature.newslist.model.ArticleItemViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

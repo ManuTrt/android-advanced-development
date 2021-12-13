@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main.model;
+package com.manu.newsreader.feature.newslist.model;
 
 import androidx.lifecycle.ViewModel;
 

@@ -1,8 +1,7 @@
-package com.manu.newsreader.ui.main.model;
+package com.manu.newsreader.feature.newslist.model;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
@@ -12,8 +11,8 @@ import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 
 import com.manu.data.NewsRepository;
-import com.manu.newsreader.ui.main.model.mapper.ArticleMapper;
-import com.manu.newsreader.ui.main.reactive.SingleLiveEvent;
+import com.manu.newsreader.feature.newslist.model.mapper.ArticleMapper;
+import com.manu.newsreader.feature.newslist.reactive.SingleLiveEvent;
 
 import java.util.List;
 

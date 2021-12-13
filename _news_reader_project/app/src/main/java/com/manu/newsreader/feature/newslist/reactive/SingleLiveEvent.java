@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main.reactive;
+package com.manu.newsreader.feature.newslist.reactive;
 
 import android.util.Log;
 

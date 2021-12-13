@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main.fragment;
+package com.manu.newsreader.feature.newslist.fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -10,14 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.manu.newsreader.databinding.NewsListFragmentBinding;
-import com.manu.newsreader.ui.main.model.NewsListViewModel;
-import com.manu.newsreader.ui.main.model.factory.ViewModelFactory;
+import com.manu.newsreader.feature.newslist.model.NewsListViewModel;
+import com.manu.newsreader.feature.newslist.model.factory.ViewModelFactory;
 import com.manu.newsreader.ui.main.navigator.AlertNavigator;
 
 public class NewsListFragment extends Fragment {

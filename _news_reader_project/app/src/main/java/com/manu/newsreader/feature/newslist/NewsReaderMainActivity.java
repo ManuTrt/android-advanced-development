@@ -1,11 +1,11 @@
-package com.manu.newsreader.ui.main;
+package com.manu.newsreader.feature.newslist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.manu.newsreader.R;
-import com.manu.newsreader.ui.main.fragment.NewsListFragment;
+import com.manu.newsreader.feature.newslist.fragment.NewsListFragment;
 
 public class NewsReaderMainActivity extends AppCompatActivity {
 

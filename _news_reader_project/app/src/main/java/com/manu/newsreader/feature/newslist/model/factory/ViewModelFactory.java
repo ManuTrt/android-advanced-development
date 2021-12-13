@@ -1,4 +1,4 @@
-package com.manu.newsreader.ui.main.model.factory;
+package com.manu.newsreader.feature.newslist.model.factory;
 
 import android.app.Application;
 
@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.manu.data.NewsRepository;
 import com.manu.newsreader.NewsReaderApp;
-import com.manu.newsreader.ui.main.model.NewsListViewModel;
+import com.manu.newsreader.feature.newslist.model.NewsListViewModel;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
